@@ -23,21 +23,6 @@ export default function Footer() {
               A passionate developer dedicated to building exceptional digital
               experiences that make a difference.
             </p>
-            <div className="flex space-x-4">
-              {["GitHub", "LinkedIn", "Twitter", "Dribbble"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social}
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700">
-                    <span className="text-sm font-medium">{social[0]}</span>
-                  </div>
-                </a>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
