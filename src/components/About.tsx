@@ -106,7 +106,7 @@ export default function About() {
               </span>{" "}
               and exploring{" "}
               <span className="font-semibold text-blue-600">
-                artificial intelligence
+                Artificial intelligence
               </span>{" "}
               to design impactful applications that solve real-world problems.
             </p>
