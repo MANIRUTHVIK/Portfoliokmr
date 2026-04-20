@@ -8,6 +8,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -60,8 +61,8 @@ export default function Navbar() {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
-          : "bg-white/95 backdrop-blur-sm py-4 border-b border-slate-200"
+          ? "bg-neutral-950/95 backdrop-blur-md shadow-sm py-2 border-b border-zinc-800"
+          : "bg-neutral-950/90 backdrop-blur-sm py-4 border-b border-zinc-800"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +70,7 @@ export default function Navbar() {
           <motion.a
             href="#home"
             onClick={(e) => handleClick(e, "#home")}
-            className="text-2xl font-bold text-blue-600 hover:scale-105 transition-transform"
+            className="text-2xl font-bold text-teal-300 hover:scale-105 transition-transform"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -88,8 +89,8 @@ export default function Navbar() {
                   onClick={(e) => handleClick(e, link.href)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative ${
                     isActive
-                      ? "text-blue-600"
-                      : "text-slate-700 hover:text-blue-600 hover:bg-slate-100"
+                      ? "text-teal-300"
+                      : "text-zinc-300 hover:text-teal-300 hover:bg-zinc-900"
                   }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -97,7 +98,7 @@ export default function Navbar() {
                   {link.name}
                   {isActive && (
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal-300"
                       layoutId="activeTab"
                       transition={{
                         type: "spring",
@@ -115,7 +116,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-blue-600 focus:outline-none"
+              className="p-2 text-zinc-300 hover:text-teal-300 focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -135,7 +136,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-slate-200"
+            className="md:hidden overflow-hidden bg-neutral-950/95 backdrop-blur-md border-t border-zinc-800"
           >
             <div className="px-4 py-4 space-y-2">
               {navLinks.map((link) => {
@@ -147,8 +148,8 @@ export default function Navbar() {
                     onClick={(e) => handleClick(e, link.href)}
                     className={`block px-4 py-3 text-base font-medium rounded-lg transition-colors ${
                       isActive
-                        ? "text-white bg-blue-600"
-                        : "text-slate-700 hover:bg-slate-100 hover:text-blue-600"
+                        ? "text-neutral-950 bg-teal-300"
+                        : "text-zinc-300 hover:bg-zinc-900 hover:text-teal-300"
                     }`}
                   >
                     {link.name}

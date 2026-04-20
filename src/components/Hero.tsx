@@ -3,15 +3,23 @@ import { motion } from "framer-motion";
 import { ArrowDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
+const bookingUrl = "https://cal.com/maniruthvik/15min";
+
+// const stats = [
+//   { label: "Production Projects", value: "8+" },
+//   { label: "Stack", value: "MERN" },
+//   { label: "Focus", value: "AI + SaaS" },
+// ];
+
 export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-white"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-neutral-950"
     >
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
           <div className="order-2 md:order-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -19,66 +27,95 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 text-sm font-medium text-blue-600 bg-slate-50 rounded-full mb-4 border border-slate-200">
-                Welcome to my portfolio
+              <span className="inline-block px-4 py-2 text-sm font-medium text-teal-300 bg-zinc-900 rounded-lg mb-4 border border-zinc-800">
+                SDE Intern Full Stack Developer
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-50 mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Hi, I'm <span className="text-blue-600">Katkuri ManiRuthvik</span>{" "}
-              👋
+              Hi, I&apos;m{" "}
+              <span className="text-teal-300">Katkuri Maniruthvik</span>
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-slate-700 font-medium mb-4"
+              className="text-lg md:text-xl text-zinc-200 font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Tech Enthusiast | Student @ NIAT | Passionate About Innovating and
-              Shaping the Future of Technology
+              I build production-ready web apps, healthcare automation tools,
+              AI workflows, and clean dashboards with modern full-stack systems.
             </motion.p>
 
             <motion.p
-              className="text-base md:text-lg text-slate-600 mb-8"
+              className="text-base md:text-lg text-zinc-400 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              A passionate web developer and second-year student at NIAT focused
-              on building modern, efficient, and scalable applications using
-              MERN stack, Next.js, Nest.js, and exploring AI technologies.
+              Currently working as an SDE Intern at 2care.ai, contributing to
+              healthcare products across patient engagement, AI voice agents,
+              multi-tenant systems, and integrations with real clinical
+              workflows.
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <a
                 href="#contact"
-                className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-all duration-300 inline-flex items-center justify-center shadow-sm hover:shadow-md"
+                className="min-h-12 px-5 py-3 bg-teal-400 text-neutral-950 text-sm font-bold rounded-lg hover:bg-rose-300 transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap"
               >
                 Get In Touch
+              </a>
+              <a
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-h-12 px-5 py-3 border border-zinc-700 text-zinc-100 text-sm font-bold rounded-lg hover:border-teal-400 hover:text-teal-300 transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap"
+              >
+                Book 15 Min Call
               </a>
               <a
                 href="https://drive.google.com/file/d/1BH8dwEkpBqoQ5OA7R7Fu374H_znTbCkS/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="min-h-12 px-5 py-3 border border-zinc-700 text-zinc-100 text-sm font-bold rounded-lg hover:border-rose-300 hover:text-rose-300 transition-all duration-300 inline-flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <ArrowDownTrayIcon className="h-5 w-5" />
+                <ArrowDownTrayIcon className="h-4 w-4 shrink-0" />
                 Download Resume
               </a>
             </motion.div>
 
-            {/* Social Icons */}
+            {/* <motion.div
+              className="grid grid-cols-3 gap-3 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.65 }}
+            >
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-lg border border-zinc-800 bg-zinc-900/70 p-4"
+                >
+                  <p className="text-xl font-bold text-zinc-50">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-zinc-500">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div> */}
+
             <motion.div
               className="flex gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -89,11 +126,11 @@ export default function Hero() {
                 href="https://github.com/MANIRUTHVIK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-100 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-slate-200"
+                className="w-12 h-12 rounded-lg bg-zinc-900 hover:bg-teal-400 flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-zinc-800"
                 aria-label="GitHub"
               >
                 <svg
-                  className="w-6 h-6 text-slate-700 group-hover:text-white transition-colors"
+                  className="w-6 h-6 text-zinc-300 group-hover:text-neutral-950 transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -108,11 +145,11 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/katkuri-mani-ruthvik-245834319"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-slate-100 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-slate-200"
+                className="w-12 h-12 rounded-lg bg-zinc-900 hover:bg-teal-400 flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-zinc-800"
                 aria-label="LinkedIn"
               >
                 <svg
-                  className="w-6 h-6 text-slate-700 group-hover:text-white transition-colors"
+                  className="w-6 h-6 text-zinc-300 group-hover:text-neutral-950 transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -122,17 +159,16 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right side - Profile Photo */}
           <motion.div
             className="order-1 md:order-2 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-slate-200 shadow-lg">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl shadow-teal-950/30">
               <Image
                 src="https://res.cloudinary.com/dosz4fxdk/image/upload/v1761910988/Gemini_Generated_Image_KMR_edited_catljr.png"
-                alt="Katkuri Mani Ruthvik"
+                alt="Katkuri Maniruthvik"
                 fill
                 className="object-cover"
                 priority
@@ -149,7 +185,7 @@ export default function Hero() {
       >
         <a
           href="#about"
-          className="text-slate-400 hover:text-blue-600 transition-colors"
+          className="text-zinc-500 hover:text-teal-300 transition-colors"
         >
           <span className="sr-only">Scroll down</span>
           <ArrowDownIcon className="h-6 w-6" />

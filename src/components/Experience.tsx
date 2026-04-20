@@ -1,73 +1,86 @@
 "use client";
 import { motion } from "framer-motion";
-import { BriefcaseIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 
 const experiences = [
   {
     id: 1,
-    role: "Computer Science Program in Data Science and ML Specialisation",
-    company: "NxtWave Institute of Advanced Technologies (NIAT)",
-    period: "Aug 2024 - Present",
+    role: "SDE Intern",
+    company: "2care.ai",
+    period: "Dec 2025 - Present - 5 mos",
+    location: "Bengaluru, Karnataka, India - On-site",
     description:
-      "Pursuing a comprehensive computer science program focused on Data Science and Machine Learning specialisation, with emphasis on hands-on learning through real-world projects. Currently mastering MERN full-stack development and exploring AI technologies.",
-    icon: AcademicCapIcon,
+      "Contributing to 0 to 1 product development and 1 to 100 scaling for healthcare automation products across TCM, post-discharge care, AI voice agents, doctor and patient dashboards, WhatsApp engagement flows, Salesforce and EHR/EMR integrations, FHIR-based workflows, multi-tenant architecture, regional landing pages, EU AI workflow optimization, and compliance-aware development across DPDP, HIPAA, and GDPR.",
+    icon: BriefcaseIcon,
+    logoText: "2care.ai",
     highlight: true,
   },
   {
     id: 2,
-    role: "Bachelor of Technology - BTech, Computer Science",
-    company: "Chaitanya Deemed to be University",
+    role: "Computer Science Program in Data Science and ML Specialisation",
+    company: "NxtWave Institute of Advanced Technologies (NIAT)",
     period: "Aug 2024 - Present",
     description:
-      "Undergraduate degree program in Computer Science, covering programming fundamentals, data structures, algorithms, and object-oriented programming principles with practical applications.",
+      "Pursuing a computer science program focused on Data Science and Machine Learning, with hands-on learning through real-world projects. Currently building with the MERN stack and modern AI technologies.",
     icon: AcademicCapIcon,
     highlight: true,
   },
   {
     id: 3,
+    role: "Bachelor of Technology - BTech, Computer Science",
+    company: "Chaitanya Deemed to be University",
+    period: "Aug 2024 - Present",
+    description:
+      "Undergraduate Computer Science degree covering programming fundamentals, data structures, algorithms, databases, and object-oriented development.",
+    icon: AcademicCapIcon,
+    highlight: true,
+  },
+  {
+    id: 4,
     role: "Intermediate, MPC",
     company: "Sri Chaitanya College of Education",
     period: "Jun 2022 - Apr 2024",
     description:
-      "Completed intermediate education in Mathematics, Physics, and Chemistry with Grade A, building a strong foundation in analytical thinking, problem-solving skills, and scientific principles.",
+      "Completed intermediate education in Mathematics, Physics, and Chemistry with Grade A, building a strong foundation in analytical thinking and problem solving.",
     icon: AcademicCapIcon,
     highlight: false,
   },
   {
-    id: 4,
+    id: 5,
     role: "Secondary School Certificate (SSC)",
     company: "Sri Chaitanya School, Karimnagar",
     period: "2021 - 2022",
     description:
-      "Completed SSC with Grade A, demonstrating academic excellence and active participation in school-level activities and competitions.",
+      "Completed SSC with Grade A, demonstrating academic consistency and participation in school-level activities.",
     icon: AcademicCapIcon,
     highlight: false,
   },
 ];
 
 const skills = [
-  "JavaScript (ES6+)",
+  "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
-  "Python",
-  "Nest.js",
+  "NestJS",
   "Express.js",
   "MongoDB",
+  "PostgreSQL",
+  "Prisma",
   "REST APIs",
   "Tailwind CSS",
+  "Cloudinary",
+  "Clerk",
+  "Google GenAI",
   "Git",
-  "AWS S3",
-  "C++",
-  "C",
 ];
 
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 bg-white border-t border-slate-200"
+      className="py-20 bg-neutral-950 border-t border-zinc-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -77,19 +90,19 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Experience & Education
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
+            Professional Experience
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            A summary of my professional journey and educational background.
+          <div className="w-20 h-1 bg-teal-400 mx-auto mb-6"></div>
+          <p className="text-lg text-zinc-400 max-w-3xl mx-auto">
+            Internship work, technical education, and the systems I am building
+            with.
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-8 relative">
-            {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-zinc-800"></div>
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -101,43 +114,55 @@ export default function Experience() {
                 className="relative"
               >
                 <div
-                  className={`absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full ${
+                  className={`absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-lg ${
                     exp.highlight
-                      ? "bg-blue-600"
-                      : "bg-white border-2 border-blue-200"
-                  } shadow-sm z-10`}
+                      ? "bg-teal-400"
+                      : "bg-zinc-900 border-2 border-zinc-800"
+                  } z-10`}
                 >
                   <exp.icon
                     className={`h-6 w-6 ${
-                      exp.highlight ? "text-white" : "text-blue-600"
+                      exp.highlight ? "text-neutral-950" : "text-teal-300"
                     }`}
                   />
                 </div>
                 <div
-                  className={`ml-20 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border ${
-                    exp.highlight
-                      ? "border-blue-200 bg-blue-50/30"
-                      : "border-slate-200"
+                  className={`ml-20 bg-zinc-900 p-6 rounded-lg transition-all duration-300 border ${
+                    exp.highlight ? "border-teal-400" : "border-zinc-800"
                   }`}
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-3">
-                    <h3 className="text-xl font-bold text-slate-900">
-                      {exp.role}
-                    </h3>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-zinc-50">
+                        {exp.role}
+                      </h3>
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        <h4 className="text-lg font-semibold text-teal-300">
+                          {exp.company}
+                        </h4>
+                        {"logoText" in exp && (
+                          <span className="inline-flex items-center rounded-lg border border-zinc-700 bg-neutral-950 px-3 py-1 text-xs font-bold tracking-wide text-zinc-100">
+                            {exp.logoText}
+                          </span>
+                        )}
+                      </div>
+                    </div>
                     <span
-                      className={`inline-block mt-2 sm:mt-0 px-4 py-1.5 text-sm font-semibold rounded-full ${
+                      className={`inline-block w-fit px-4 py-1.5 text-sm font-semibold rounded-lg whitespace-nowrap ${
                         exp.highlight
-                          ? "bg-blue-600 text-white"
-                          : "bg-slate-100 text-slate-700"
+                          ? "bg-teal-400 text-neutral-950"
+                          : "bg-zinc-800 text-zinc-300"
                       }`}
                     >
                       {exp.period}
                     </span>
                   </div>
-                  <h4 className="text-lg font-semibold text-blue-600 mb-3">
-                    {exp.company}
-                  </h4>
-                  <p className="text-slate-600 leading-relaxed">
+                  {"location" in exp && (
+                    <p className="mb-3 text-sm font-medium text-zinc-500">
+                      {exp.location}
+                    </p>
+                  )}
+                  <p className="text-zinc-400 leading-relaxed">
                     {exp.description}
                   </p>
                 </div>
@@ -152,8 +177,8 @@ export default function Experience() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-16"
           >
-            <h3 className="text-2xl font-bold text-center text-slate-900 mb-8">
-              Skills & Technologies
+            <h3 className="text-2xl font-bold text-center text-zinc-50 mb-8">
+              Core Technologies
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {skills.map((skill, index) => (
@@ -163,7 +188,7 @@ export default function Experience() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="px-4 py-2 bg-slate-100 rounded-full text-sm font-medium text-slate-800 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300"
+                  className="px-4 py-2 bg-zinc-900 rounded-lg text-sm font-medium text-zinc-300 hover:bg-teal-400 hover:text-neutral-950 transition-all duration-300"
                 >
                   {skill}
                 </motion.span>

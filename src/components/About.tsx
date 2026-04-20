@@ -50,7 +50,10 @@ const languages = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white border-t border-slate-200">
+    <section
+      id="about"
+      className="py-20 bg-neutral-950 border-t border-zinc-800"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,13 +62,16 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-teal-400 mx-auto mb-6"></div>
+          <p className="text-lg text-zinc-400 max-w-3xl mx-auto">
+            I work across frontend, backend, databases, integrations, and AI
+            workflows to turn product ideas into reliable shipped software.
+          </p>
         </motion.div>
 
-        {/* Profile Photo and Bio Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -74,10 +80,10 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="flex justify-center"
           >
-            <div className="relative w-56 h-56 rounded-2xl overflow-hidden shadow-lg ring-4 ring-slate-200">
+            <div className="relative w-56 h-56 rounded-lg overflow-hidden shadow-2xl shadow-teal-950/30 ring-4 ring-zinc-800">
               <Image
                 src="https://res.cloudinary.com/dosz4fxdk/image/upload/v1761910988/Gemini_Generated_Image_KMR_edited_catljr.png"
-                alt="Katkuri Mani Ruthvik"
+                alt="Katkuri Maniruthvik"
                 fill
                 className="object-cover"
               />
@@ -91,35 +97,37 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-2"
           >
-            <p className="text-lg text-slate-600 leading-relaxed mb-4">
-              As a second-year student at{" "}
-              <span className="font-semibold text-blue-600">
+            <p className="text-lg text-zinc-400 leading-relaxed mb-4">
+             I am an SDE Intern at{" "}
+              <span className="font-semibold text-teal-300">2care.ai</span>,
+              building healthcare automation products across dashboards,
+              patient engagement, AI voice workflows, and integrations. I also
+              continue my computer science learning at{" "}
+              <span className="font-semibold text-teal-300">
                 NIAT (NxtWave Institute of Advanced Technologies)
-              </span>
-              , I'm deeply passionate about web development and committed to
-              creating innovative, tech-driven solutions.
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed mb-4">
-              I'm currently mastering{" "}
-              <span className="font-semibold text-blue-600">
-                Full-stack web development
               </span>{" "}
-              and exploring{" "}
-              <span className="font-semibold text-blue-600">
-                Artificial intelligence
-              </span>{" "}
-              to design impactful applications that solve real-world problems.
+              with a focus on Data Science and ML.
             </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              With strong dedication to continuous learning and a passion for
-              building scalable, modern applications, I aim to contribute to
-              transformative projects in the tech industry and shape the future
-              of technology.
+            <p className="text-lg text-zinc-400 leading-relaxed mb-4">
+              My core stack includes{" "}
+              <span className="font-semibold text-teal-300">
+                Next.js, React, TypeScript, Node.js, NestJS, MongoDB, SQL,
+                Prisma, and Tailwind CSS
+              </span>{" "}
+              with hands-on product work in authentication, dashboards, APIs,
+              cloud storage, and deployment.
+            </p>
+            <p className="text-lg text-zinc-400 leading-relaxed">
+              I care about building software that feels clean for users and
+              maintainable for teams, especially in products that combine{" "}
+              <span className="font-semibold text-teal-300">
+                AI, automation, and scalable full-stack systems
+              </span>{" "}
+              .
             </p>
           </motion.div>
         </div>
 
-        {/* Skills Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {skills.map((skill, index) => (
             <motion.div
@@ -128,15 +136,15 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:shadow-md hover:scale-[1.02] transition-all duration-300"
+              className="bg-zinc-900 p-8 rounded-lg border border-zinc-800 hover:border-teal-400 hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-4 mx-auto border border-blue-100">
-                <skill.icon className="h-7 w-7 text-blue-600" />
+              <div className="w-14 h-14 bg-neutral-950 rounded-lg flex items-center justify-center mb-4 mx-auto border border-zinc-800">
+                <skill.icon className="h-7 w-7 text-teal-300" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 text-center">
+              <h3 className="text-xl font-semibold text-zinc-50 mb-2 text-center">
                 {skill.name}
               </h3>
-              <p className="text-slate-600 text-center">{skill.description}</p>
+              <p className="text-zinc-400 text-center">{skill.description}</p>
             </motion.div>
           ))}
         </div>
@@ -150,7 +158,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="mb-10"
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-zinc-50 mb-8 text-center">
               Technical Skills
             </h3>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-5">
@@ -163,16 +171,16 @@ export default function About() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
                   <div className="flex justify-between mb-2">
-                    <span className="text-sm font-semibold text-slate-800">
+                    <span className="text-sm font-semibold text-zinc-200">
                       {tech.name}
                     </span>
-                    <span className="text-sm font-medium text-slate-500">
+                    <span className="text-sm font-medium text-zinc-500">
                       {tech.level}%
                     </span>
                   </div>
-                  <div className="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                  <div className="w-full bg-zinc-800 rounded-lg h-3 overflow-hidden">
                     <motion.div
-                      className="h-full rounded-full bg-blue-600"
+                      className="h-full rounded-lg bg-teal-400"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${tech.level}%` }}
                       viewport={{ once: true }}
@@ -193,7 +201,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">Languages</h3>
+          <h3 className="text-2xl font-bold text-zinc-50 mb-6">Languages</h3>
           <div className="flex justify-center gap-6">
             {languages.map((lang, index) => (
               <motion.div
@@ -202,10 +210,10 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-slate-50 px-8 py-4 rounded-full border border-slate-200 hover:shadow-md transition-all duration-300"
+                className="bg-zinc-900 px-8 py-4 rounded-lg border border-zinc-800 hover:border-teal-400 transition-all duration-300"
               >
-                <p className="font-semibold text-slate-900">{lang.name}</p>
-                <p className="text-sm text-blue-600">{lang.level}</p>
+                <p className="font-semibold text-zinc-50">{lang.name}</p>
+                <p className="text-sm text-teal-300">{lang.level}</p>
               </motion.div>
             ))}
           </div>

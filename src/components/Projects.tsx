@@ -7,6 +7,23 @@ import {
 
 const projects = [
   {
+    title: "Health Wallet",
+    description:
+      "A secure personal health records platform for uploading, tracking, and sharing medical reports and vitals. Built with Next.js 15, Clerk, Neon Serverless Postgres, Prisma, Cloudinary, Google GenAI, Zod validation, row-level security, and CDN-backed file delivery for healthcare data workflows.",
+    tags: [
+      "Next.js 15",
+      "Clerk",
+      "Neon",
+      "Prisma",
+      "Cloudinary",
+      "Google GenAI",
+      "Zod",
+    ],
+    image: "https://play-lh.googleusercontent.com/koRzdzTKVQFAuGROwJooFttV3htWBBTO9_GG8RItBtQG1rpGomVuJVITke_n2-3iUyKm=w600-h300-pc0xffffff-pd",
+    liveUrl: "https://digital-wallet-swart.vercel.app/",
+    codeUrl: "https://github.com/MANIRUTHVIK/DigitalWallet",
+  },
+  {
     title: "FlyRoute",
     description:
       "A full-stack travel planning platform that computes optimal routes between cities based on cheapest airfare or fastest travel time. Includes route breakdowns, admin dashboard, dynamic airfare updates, and AI-generated city images. Showcases expertise in database modeling, authentication, and modern UI.",
@@ -57,7 +74,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white border-t border-slate-200">
+    <section
+      id="projects"
+      className="py-20 bg-neutral-900 border-t border-zinc-800"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,13 +86,14 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            My Projects
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
+            Selected Full Stack Projects
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on. Each project
-            represents a unique challenge and learning opportunity.
+          <div className="w-20 h-1 bg-teal-400 mx-auto mb-6"></div>
+          <p className="text-lg text-zinc-400 max-w-3xl mx-auto">
+            Product-style builds covering healthcare records, route planning,
+            commerce, backend APIs, authentication, data modeling, and cloud
+            integrations.
           </p>
         </motion.div>
 
@@ -85,20 +106,20 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg border border-slate-200 flex flex-col transition-all duration-300"
+              className="group relative bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 hover:border-teal-400 flex flex-col transition-all duration-300"
             >
-              <div className="h-52 overflow-hidden relative border-b border-slate-200">
+              <div className="h-52 overflow-hidden relative border-b border-zinc-800 bg-neutral-950 p-6">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 flex flex-col grow">
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-zinc-50 mb-3 group-hover:text-teal-300 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed grow">
+                <p className="text-zinc-400 mb-4 text-sm leading-relaxed grow">
                   {project.description}
                 </p>
 
@@ -106,19 +127,19 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1.5 text-xs font-semibold bg-slate-100 text-slate-800 rounded-full hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                      className="px-3 py-1.5 text-xs font-semibold bg-zinc-900 text-zinc-300 rounded-lg hover:bg-teal-400 hover:text-neutral-950 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-3 pt-4 border-t border-slate-200">
+                <div className="flex gap-3 pt-4 border-t border-zinc-800">
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-md transition-all duration-300"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-neutral-950 bg-teal-400 rounded-lg hover:bg-rose-300 transition-all duration-300 whitespace-nowrap"
                   >
                     Live Demo
                     <ArrowTopRightOnSquareIcon className="h-4 w-4" />
@@ -127,7 +148,7 @@ export default function Projects() {
                     href={project.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-all duration-300"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-zinc-100 bg-zinc-900 hover:bg-zinc-800 rounded-lg transition-all duration-300 whitespace-nowrap"
                   >
                     Code
                     <CodeBracketIcon className="h-4 w-4" />

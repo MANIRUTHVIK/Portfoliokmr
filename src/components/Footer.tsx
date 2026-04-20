@@ -50,7 +50,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">
+    <footer className="bg-neutral-950 text-zinc-100 py-12 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <motion.div
@@ -60,12 +60,12 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="md:col-span-2"
           >
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">
-              Katkuri Mani Ruthvik
+            <h3 className="text-2xl font-bold mb-4 text-teal-300">
+              Katkuri Maniruthvik
             </h3>
-            <p className="text-slate-400 mb-6">
-              Tech Enthusiast | Student @ NIAT | Passionate About Innovating and
-              Shaping the Future of Technology
+            <p className="text-zinc-400 mb-6">
+              Full Stack Developer focused on healthcare automation, AI
+              workflows, dashboards, APIs, and scalable web products.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -74,7 +74,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-slate-800 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110 border border-slate-700"
+                  className="w-12 h-12 rounded-lg bg-zinc-900 hover:bg-teal-400 hover:text-neutral-950 flex items-center justify-center transition-all duration-300 hover:scale-110 border border-zinc-800"
                   whileHover={{ y: -4 }}
                   aria-label={social.name}
                 >
@@ -97,7 +97,7 @@ export default function Footer() {
                   <li key={item}>
                     <a
                       href={`#${item.toLowerCase()}`}
-                      className="text-slate-400 hover:text-blue-400 transition-colors inline-block hover:translate-x-1 transform duration-200"
+                      className="text-zinc-400 hover:text-teal-300 transition-colors inline-block hover:translate-x-1 transform duration-200"
                     >
                       {item}
                     </a>
@@ -114,10 +114,10 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <address className="not-italic text-slate-400 space-y-2">
+            <address className="not-italic text-zinc-400 space-y-2">
               <p className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-blue-400"
+                  className="w-5 h-5 text-teal-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -140,10 +140,10 @@ export default function Footer() {
               <p>
                 <a
                   href="mailto:katkurimaniruthvik@gmail.com"
-                  className="hover:text-blue-400 transition-colors flex items-center gap-2"
+                  className="hover:text-teal-300 transition-colors flex items-center gap-2"
                 >
                   <svg
-                    className="w-5 h-5 text-blue-400"
+                    className="w-5 h-5 text-teal-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -163,19 +163,19 @@ export default function Footer() {
         </div>
 
         <motion.div
-          className="border-t border-slate-800 mt-12 pt-8 text-center"
+          className="border-t border-zinc-800 mt-12 pt-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className="flex items-center justify-center text-slate-400 text-sm">
+          <p className="flex items-center justify-center text-zinc-400 text-sm">
             <span>Made with</span>
-            <HeartIcon className="h-4 w-4 text-red-500 mx-1.5" />
-            <span>by Katkuri Mani Ruthvik</span>
+            <HeartIcon className="h-4 w-4 text-rose-400 mx-1.5" />
+            <span>by Katkuri Maniruthvik</span>
           </p>
-          <p className="text-slate-500 text-sm mt-2">
-            © {currentYear} All rights reserved.
+          <p className="text-zinc-500 text-sm mt-2">
+            Copyright {currentYear} All rights reserved.
           </p>
         </motion.div>
       </div>
