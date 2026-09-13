@@ -8,19 +8,19 @@ const achievements = [
     id: 1,
     title:
       "Runner-Up at Ekathon 2026: Official Hackathon of AI Impact Summit",
-    subtitle: "Health AI on India's Digital Rails",
+    subtitle: "Health AI on India's Digital Rails · 36-Hour Hackathon",
     badge: "Runner-Up",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQFKW3g3zRT-fg/feedshare-shrink_800/B56Zx_91exJ4Ak-/0/1771673443556?e=1778112000&v=beta&t=8kxo8bceyvY0g8iBw_MkWaDWfEjfyiLNhplx0kUgjps",
+      "https://res.cloudinary.com/dosz4fxdk/image/upload/v1789282751/Ekathon_e9f1ih.png",
     imageAlt: "Ekathon 2026 team and runner-up moment",
     event: "Ekathon 2026",
     points: [
-      "Small team, 36-hour sprint, focused on a real healthcare workflow problem.",
-      "Built a Scribe x EMR integration so pre-assessment data, voice-agent output, and patient context flow into the doctor's workspace during consultation.",
-      "Reduced documentation friction by targeting no copy-paste and no context switching in the clinical workflow.",
-      "Built from lived product context at 2care.ai, where broken data handoffs directly impact time, errors, and outcomes.",
+      "Secured Runner-Up in a 36-hour sprint at the official hackathon of the AI Impact Summit.",
+      "Architected an ambient Scribe x EMR pipeline streaming consultation audio, voice agent outputs, and clinical pre-assessment entities directly into the physician's EHR workspace.",
+      "Targeted zero copy-paste and eliminated clinical context-switching during live patient consultations.",
+      "Built with practical healthcare product engineering experience gained from building at 2care.ai.",
     ],
-    tags: ["Ekathon 2026", "Health AI", "EMR Integration", "Clinical Workflow"],
+    tags: ["Ekathon 2026", "Health AI", "EMR Integration", "Clinical Workflow", "Voice AI"],
   },
   {
     id: 2,
@@ -93,31 +93,31 @@ const achievements = [
       "NIAT",
     ],
   },
-  {
-    id: 5,
-    title: "Pixel to Product Hackathon - Built WanderWork",
-    subtitle: "GEN AI NIAT Club | AI-first full-stack build sprint",
-    badge: "Hackathon Build",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5622AQF5nHIXDjcjWA/feedshare-shrink_1280/B56ZVB08zVGoAs-/0/1740566156274?e=1778112000&v=beta&t=YpytjP7zzfP_mD4vNCy06GVC_-vJwg_NQ3_arIQLQ2Y",
-    imageAlt:
-      "WanderWork team and hackathon showcase from Pixel to Product event",
-    event: "Pixel to Product",
-    points: [
-      "Built WanderWork with Venkatesh Bijigiri and Nithwesh Akinapally during the Pixel to Product Hackathon by the GEN AI NIAT Club.",
-      "Created an AI-driven platform for digital nomads to plan travel, discover remote jobs, and connect with communities.",
-      "Implemented features like flight and hotel price prediction, city insights (WiFi, safety, living cost), remote job listings, and coliving/coworking discovery.",
-      "Shipped a full-stack prototype in a rapid 8-12 hour sprint using AI-assisted and no-code workflows.",
-      "Used Relume, Builder.io, Lovable AI, Figma, Supabase, ChatGPT, and Claude AI, while learning resilience under tool limits and tight deadlines.",
-    ],
-    tags: [
-      "Hackathon",
-      "WanderWork",
-      "Digital Nomads",
-      "No-Code AI",
-      "Supabase",
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Pixel to Product Hackathon - Built WanderWork",
+  //   subtitle: "GEN AI NIAT Club | AI-first full-stack build sprint",
+  //   badge: "Hackathon Build",
+  //   image:
+  //     "https://cdn.builder.io/api/v1/image/assets/d86bd70eee2b47018d624354bc885fb1/86aa1a630092de11b812b95e28be57df3adac2b4e954ab209748d3557d4ed993?placeholderIfAbsent=true&width=200",
+  //   imageAlt:
+  //     "WanderWork platform and hackathon showcase from Pixel to Product event",
+  //   event: "Pixel to Product",
+  //   points: [
+  //     "Built WanderWork with Venkatesh Bijigiri and Nithwesh Akinapally during the Pixel to Product Hackathon by the GEN AI NIAT Club.",
+  //     "Created an AI-driven platform for digital nomads to plan travel, discover remote jobs, and connect with communities.",
+  //     "Implemented features like flight and hotel price prediction, city insights (WiFi, safety, living cost), remote job listings, and coliving/coworking discovery.",
+  //     "Shipped a full-stack prototype in a rapid 8-12 hour sprint using AI-assisted and no-code workflows.",
+  //     "Used Relume, Builder.io, Lovable AI, Figma, Supabase, ChatGPT, and Claude AI, while learning resilience under tool limits and tight deadlines.",
+  //   ],
+  //   tags: [
+  //     "Hackathon",
+  //     "WanderWork",
+  //     "Digital Nomads",
+  //     "No-Code AI",
+  //     "Supabase",
+  //   ],
+  // },
 ];
 
 export default function Achievements() {
@@ -134,8 +134,11 @@ export default function Achievements() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal-400/30 bg-teal-400/10 text-teal-300 text-xs font-semibold mb-4 tracking-wider uppercase">
+            Honors & Hackathons
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-50 mb-4">
-            Achievements
+            Achievements & Hackathon Builds
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto mb-6"></div>
           <p className="text-lg text-zinc-400 max-w-3xl mx-auto">
@@ -161,6 +164,7 @@ export default function Achievements() {
                       src={achievement.image}
                       alt={achievement.imageAlt}
                       fill
+                      unoptimized
                       className="object-contain"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />

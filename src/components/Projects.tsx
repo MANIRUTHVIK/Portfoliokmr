@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   ArrowTopRightOnSquareIcon,
   CodeBracketIcon,
@@ -7,26 +8,9 @@ import {
 
 const projects = [
   {
-    title: "Health Wallet",
+    title: "FlyRoute (Optimal Airfare & Route Finding)",
     description:
-      "A secure personal health records platform for uploading, tracking, and sharing medical reports and vitals. Built with Next.js 15, Clerk, Neon Serverless Postgres, Prisma, Cloudinary, Google GenAI, Zod validation, row-level security, and CDN-backed file delivery for healthcare data workflows.",
-    tags: [
-      "Next.js 15",
-      "Clerk",
-      "Neon",
-      "Prisma",
-      "Cloudinary",
-      "Google GenAI",
-      "Zod",
-    ],
-    image: "https://play-lh.googleusercontent.com/koRzdzTKVQFAuGROwJooFttV3htWBBTO9_GG8RItBtQG1rpGomVuJVITke_n2-3iUyKm=w600-h300-pc0xffffff-pd",
-    liveUrl: "https://digital-wallet-swart.vercel.app/",
-    codeUrl: "https://github.com/MANIRUTHVIK/DigitalWallet",
-  },
-  {
-    title: "FlyRoute",
-    description:
-      "A full-stack travel planning platform that computes optimal routes between cities based on cheapest airfare or fastest travel time. Includes route breakdowns, admin dashboard, dynamic airfare updates, and AI-generated city images. Showcases expertise in database modeling, authentication, and modern UI.",
+      "Full-stack multi-city routing platform computing Pareto-optimal travel trajectories based on cost and transit duration. Architected an administrative control plane for real-time airfare updates, automated city creation, and an AWS S3 media pipeline with AI-generated visual fallbacks.",
     tags: [
       "Next.js",
       "NestJS",
@@ -34,6 +18,7 @@ const projects = [
       "PostgreSQL",
       "Prisma ORM",
       "AWS S3",
+      "Route Optimization",
     ],
     image:
       "https://raw.githubusercontent.com/MANIRUTHVIK/AirfareDeploy/refs/heads/main/airfare_frontend/app/favicon.ico",
@@ -41,34 +26,50 @@ const projects = [
     codeUrl: "https://github.com/MANIRUTHVIK/AirfareDeploy",
   },
   {
-    title: "QuickCart",
+    title: "Health Wallet (Personal Health Records)",
     description:
-      "A full-stack e-commerce platform built using Next.js with Clerk for authentication, Inngest for backend workflows, and MongoDB for storage. Includes separate dashboards for users and sellers, product listing, image uploads, order tracking, and cart management.",
-    tags: ["Next.js", "Clerk", "Inngest", "MongoDB", "Cloudinary"],
+      "HIPAA-conscious personal health record (PHR) architecture featuring secure report ingestion, vitals tracking, and role-based sharing. Engineered with Next.js 15, Clerk RBAC, Neon Serverless Postgres, Prisma, and Google GenAI multimodal OCR extraction for clinical lab workflows.",
+    tags: [
+      "Next.js 15",
+      "Clerk Auth",
+      "Neon Postgres",
+      "Prisma ORM",
+      "Google GenAI",
+      "Zod Validation",
+    ],
+    image: "https://play-lh.googleusercontent.com/koRzdzTKVQFAuGROwJooFttV3htWBBTO9_GG8RItBtQG1rpGomVuJVITke_n2-3iUyKm=w600-h300-pc0xffffff-pd",
+    liveUrl: "https://digital-wallet-swart.vercel.app/",
+    codeUrl: "https://github.com/MANIRUTHVIK/DigitalWallet",
+  },
+  {
+    title: "QuickCart / QuantumCart",
+    description:
+      "Full-stack e-commerce marketplace featuring an event-driven architecture powered by Inngest background workflow queues for asynchronous checkout, inventory synchronization, Clerk multi-role auth, and MongoDB persistence with isolated buyer/seller portals.",
+    tags: ["Next.js", "Clerk Auth", "Inngest Workflows", "MongoDB", "Cloudinary"],
     image:
       "https://quick-cart-umber-omega.vercel.app/_next/static/media/logo.83ad3901.svg",
     liveUrl: "https://quick-cart-umber-omega.vercel.app/",
     codeUrl: "https://github.com/MANIRUTHVIK/QuickCart",
   },
   {
-    title: "NxtCart",
+    title: "Threads Application (Scalable Backend)",
     description:
-      "A simplified e-commerce web application built using React.js, featuring product browsing, cart management, and secure JWT-based authentication. Simulates real-world online marketplace workflows with API integration and frontend development best practices.",
-    tags: ["ReactJS", "JWT", "REST APIs"],
-    image:
-      "https://res.cloudinary.com/dosz4fxdk/image/upload/v1747737691/6fad20838855997d164dd88d885fad87bdfa3be6_1_fqtb9f.png", // 🛒 E-commerce / Shopping
-    liveUrl: "https://kmrnxtcart.netlify.app/",
-    codeUrl: "https://github.com/MANIRUTHVIK/kmrNxtcart",
-  },
-  {
-    title: "ThreadsApplication",
-    description:
-      "A backend social media application built using NestJS and MongoDB. Includes user authentication, follower/following features, direct messaging, and rate limiting to prevent spam. Focused on backend architecture, API design, and secure authentication.",
-    tags: ["NestJS", "MongoDB", "JWT", "REST APIs"],
+      "Resilient social graph backend engineered in NestJS and MongoDB. Implemented JWT session lifecycle management, directional graph models for follower relationships, and token-bucket rate limiting to mitigate spam on real-time messaging endpoints.",
+    tags: ["NestJS", "MongoDB", "Rate Limiting", "JWT Security", "REST APIs"],
     image:
       "https://cdn.vectorstock.com/i/500p/79/33/meta-threads-logo-symbol-vector-47787933.jpg",
     liveUrl: "https://github.com/MANIRUTHVIK/ThreadsApplication-Nest-Js-",
     codeUrl: "https://github.com/MANIRUTHVIK/ThreadsApplication-Nest-Js-",
+  },
+  {
+    title: "NxtCart (E-Commerce Platform)",
+    description:
+      "Production-pattern e-commerce frontend in React.js featuring authenticated JWT session persistence, protected client-side route guards, synchronized global shopping cart state, and responsive checkout flows consuming REST APIs.",
+    tags: ["React.js", "JWT Authentication", "REST APIs", "Context API"],
+    image:
+      "https://res.cloudinary.com/dosz4fxdk/image/upload/v1747737691/6fad20838855997d164dd88d885fad87bdfa3be6_1_fqtb9f.png",
+    liveUrl: "https://kmrnxtcart.netlify.app/",
+    codeUrl: "https://github.com/MANIRUTHVIK/kmrNxtcart",
   },
 ];
 
@@ -109,10 +110,12 @@ export default function Projects() {
               className="group relative bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 hover:border-teal-400 flex flex-col transition-all duration-300"
             >
               <div className="h-52 overflow-hidden relative border-b border-zinc-800 bg-neutral-950 p-6">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  unoptimized
+                  className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 flex flex-col grow">
