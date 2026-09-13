@@ -4,12 +4,15 @@ import { ArrowDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const bookingUrl = "https://cal.com/maniruthvik/15min";
+const resumeUrl =
+  "https://drive.google.com/file/d/1ae96s6nCjoL0W8vRmDVCgrBGVUcIvPen/view?usp=sharing";
 
-// const stats = [
-//   { label: "Production Projects", value: "8+" },
-//   { label: "Stack", value: "MERN" },
-//   { label: "Focus", value: "AI + SaaS" },
-// ];
+const stats = [
+  { label: "Voice Agent Latency", value: "<300ms" },
+  { label: "External Integrations", value: "20+" },
+  { label: "Production Startup SDE", value: "8 Mos" },
+  { label: "Ekathon 2026 (Health AI)", value: "Runner-Up" },
+];
 
 export default function Hero() {
   return (
@@ -27,8 +30,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="inline-block px-4 py-2 text-sm font-medium text-teal-300 bg-zinc-900 rounded-lg mb-4 border border-zinc-800">
-                SDE Intern Full Stack Developer
+              <span className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-teal-300 bg-zinc-900 rounded-lg border border-teal-400/30 tracking-wide">
+                <span className="h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
+                Software Development Engineer · Voice AI & Full Stack
               </span>
             </motion.div>
 
@@ -48,21 +52,44 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              I build production-ready web apps, healthcare automation tools,
-              AI workflows, and clean dashboards with modern full-stack systems.
+              Architecting production Voice AI systems, low-latency streaming
+              pipelines, multi-tenant healthcare platforms, and scalable web apps.
             </motion.p>
 
             <motion.p
-              className="text-base md:text-lg text-zinc-400 mb-8"
+              className="text-base md:text-lg text-zinc-400 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Currently working as an SDE Intern at 2care.ai, contributing to
-              healthcare products across patient engagement, AI voice agents,
-              multi-tenant systems, and integrations with real clinical
-              workflows.
+              Completed an 8-month SDE tenure at{" "}
+              <span className="text-teal-300 font-semibold">2care.ai</span>,
+              where I engineered Voice AI agents optimized for &lt;300ms turn-taking
+              latency, built multi-tenant backends supporting 20+ clinical EHR/EMR
+              integrations, and automated patient communication on India&apos;s digital rails.
             </motion.p>
+
+            {/* Senior Impact Metrics */}
+            <motion.div
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+            >
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-xl border border-zinc-800 bg-zinc-900/80 p-3.5 hover:border-teal-400/50 transition-colors text-center sm:text-left"
+                >
+                  <p className="text-lg sm:text-xl font-extrabold text-teal-300">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-[11px] font-medium text-zinc-400 leading-tight">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
 
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
@@ -85,7 +112,7 @@ export default function Hero() {
                 Book 15 Min Call
               </a>
               <a
-                href="https://drive.google.com/file/d/1BH8dwEkpBqoQ5OA7R7Fu374H_znTbCkS/view?usp=sharing"
+                href={resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="min-h-12 px-5 py-3 border border-zinc-700 text-zinc-100 text-sm font-bold rounded-lg hover:border-rose-300 hover:text-rose-300 transition-all duration-300 inline-flex items-center justify-center gap-2 whitespace-nowrap"
@@ -94,27 +121,6 @@ export default function Hero() {
                 Download Resume
               </a>
             </motion.div>
-
-            {/* <motion.div
-              className="grid grid-cols-3 gap-3 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.65 }}
-            >
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-lg border border-zinc-800 bg-zinc-900/70 p-4"
-                >
-                  <p className="text-xl font-bold text-zinc-50">
-                    {stat.value}
-                  </p>
-                  <p className="mt-1 text-xs font-medium text-zinc-500">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </motion.div> */}
 
             <motion.div
               className="flex gap-4"

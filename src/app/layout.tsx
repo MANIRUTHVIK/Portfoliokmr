@@ -6,7 +6,7 @@ const siteUrl = "https://maniruthvik.vercel.app";
 const profileImage =
   `${siteUrl}/katkuri-maniruthvik.jpg`;
 const description =
-  "Katkuri Maniruthvik is a software engineer and full-stack developer building scalable web applications, efficient systems, healthcare automation tools, and AI-powered products.";
+  "Katkuri Maniruthvik is a Software Development Engineer specializing in production Voice AI pipelines, low-latency streaming architectures (<300ms), multi-tenant healthcare platforms, and scalable full-stack web applications.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Katkuri Maniruthvik | Portfolio",
+  title: "Katkuri Maniruthvik | Software Development Engineer · Voice AI & Full Stack",
   description,
   keywords: [
     "Katkuri Maniruthvik",
@@ -29,13 +29,25 @@ export const metadata: Metadata = {
     "maniruthvik",
     "Ruthvik",
     "ruthvik",
-    "software engineer",
+    "Software Development Engineer",
+    "SDE",
+    "Voice AI",
+    "Agentic AI",
+    "Healthcare AI",
     "full stack developer",
-    "web developer",
-    "portfolio",
-    "JavaScript",
+    "Next.js",
     "React",
+    "TypeScript",
+    "NestJS",
     "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "MongoDB",
+    "Vapi",
+    "Bolna",
+    "Retell",
+    "HL7",
+    "FHIR",
   ],
   authors: [{ name: "Katkuri Maniruthvik" }],
   creator: "Katkuri Maniruthvik",

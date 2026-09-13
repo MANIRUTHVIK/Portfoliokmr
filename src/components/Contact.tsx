@@ -79,9 +79,9 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-zinc-50 mb-6">
               Contact Details
             </h3>
-            <p className="text-zinc-400 mb-8">
-              I am open to internships, web development work, technical
-              discussions, and projects that need a builder who can learn fast.
+            <p className="text-zinc-400 mb-8 leading-relaxed">
+              I am open to Software Engineering opportunities, Voice AI & agentic
+              systems engineering, full-stack architecture roles, and technical discussions.
             </p>
 
             <div className="space-y-6">

@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         hostname: "media.licdn.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.builder.io",
+        pathname: "/**",
+      },
     ],
   },
 };

@@ -162,22 +162,6 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="border-t border-zinc-800 mt-12 pt-8 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <p className="flex items-center justify-center text-zinc-400 text-sm">
-            <span>Made with</span>
-            <HeartIcon className="h-4 w-4 text-rose-400 mx-1.5" />
-            <span>by Katkuri Maniruthvik</span>
-          </p>
-          <p className="text-zinc-500 text-sm mt-2">
-            Copyright {currentYear} All rights reserved.
-          </p>
-        </motion.div>
       </div>
     </footer>
   );
